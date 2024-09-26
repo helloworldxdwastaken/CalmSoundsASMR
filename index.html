@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CALM SOUNDS</title>
+    <!-- Make the website mobile-friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+        <img id="dark-mode-icon" src="icons/lightmode.png" alt="Toggle Dark Mode">
+    </button>
+
+    <h1>CALM SOUNDS</h1>
+    <div class="sound-container">
+        <!-- Rain Sound -->
+        <div id="sound-item-rain" class="sound-item">
+            <img src="images/rain.png" alt="Rain" onclick="toggleSound('rain')">
+            <p>Rain</p>
+            <!-- Volume Slider -->
+            <input type="range" id="volume-rain" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('rain', this.value)" onchange="changeVolume('rain', this.value)">
+        </div>
+        <!-- Thunderstorm Sound -->
+        <div id="sound-item-thunder" class="sound-item">
+            <img src="images/thunder.png" alt="Thunderstorm" onclick="toggleSound('thunder')">
+            <p>Thunderstorm</p>
+            <!-- Volume Slider -->
+            <input type="range" id="volume-thunder" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('thunder', this.value)" onchange="changeVolume('thunder', this.value)">
+        </div>
+        <!-- Ocean Sound -->
+        <div id="sound-item-ocean" class="sound-item">
+            <img src="images/ocean.png" alt="Ocean" onclick="toggleSound('ocean')">
+            <p>Ocean</p>
+            <!-- Volume Slider -->
+            <input type="range" id="volume-ocean" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('ocean', this.value)" onchange="changeVolume('ocean', this.value)">
+        </div>
+        <!-- Forest Sound -->
+        <div id="sound-item-forest" class="sound-item">
+            <img src="images/forest.png" alt="Forest" onclick="toggleSound('forest')">
+            <p>Forest</p>
+            <!-- Volume Slider -->
+            <input type="range" id="volume-forest" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('forest', this.value)" onchange="changeVolume('forest', this.value)">
+        </div>
+        <!-- Add more categories here if needed -->
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
